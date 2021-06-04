@@ -18,98 +18,35 @@
     <title>Weather Dashboard</title>
 </head>
 
-<body>
+<body class="flex-column min-100-vh">
     <!-- header start -->
-    <header>
-        <div class="container-fluid">
-            <h1>Weather Dashboard</h1>
-        </div>
+    <header class="bg-info">
+        <h1 class="app-title text-center text-white font-weight-bolder"><i class="fas fa-cloud-sun">Weather Dashboard</i></h1>
     </header>
-    <main>
-        <div class="container-fluid">
-            <!-- <div class="row"> -->
-            <!-- side-panel div for search and history -->
+
+    <main class="container-fluid mb-5">
+        <div class="row">
             <div class="col-4">
-                <div class="input-group">
-                    <h2>Search for a City:</h2>
-                    <br />
-                    <div class="form-outline">
-                        <input id="search-input" type="search" id="form1" class="form-control" />
-                    </div>
-                    <button id="search-button" type="button" class="btn btn-primary">
-                        <i class="fas fa-search"></i>
-                    </button>
-                    <br />
-                    
-                </div>
-                <!-- </div> -->
-            </div>
-            <!-- current city weather conditions div -->
-            <div class="col-8>
-                <div class="row">
-                <div class="col-8">
-                    <h2>Current City Name and Date</h2>
-                    <p>Temp</p>
-                    <p>Wind</p>
-                    <p>Humidity</p>
-                    <p>UV Index</p>
-                </div>
-                <!-- 5-day forecast container for cards -->
-                <div class="row">
-                    <!-- card 1 -->
-                    <div class="card col" style="width: 18rem">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Date</li>
-                            <li class="list-group-item">Icon</li>
-                            <li class="list-group-item">Temp</li>
-                            <li class="list-group-item">Humidity</li>
-                            <li class="list-group-item">UV Index</li>
-                        </ul>
-                    </div>
-                    <!-- card 2 -->
-                    <div class="card col" style="width: 18rem">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Date</li>
-                            <li class="list-group-item">Icon</li>
-                            <li class="list-group-item">Temp</li>
-                            <li class="list-group-item">Humidity</li>
-                            <li class="list-group-item">UV Index</li>
-                        </ul>
-                    </div>
-                    <!-- card 3 -->
-                    <div class="card col" style="width: 18rem">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Date</li>
-                            <li class="list-group-item">Icon</li>
-                            <li class="list-group-item">Temp</li>
-                            <li class="list-group-item">Humidity</li>
-                            <li class="list-group-item">UV Index</li>
-                        </ul>
-                    </div>
-                    <!-- card 4 -->
-                    <div class="card col" style="width: 18rem">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Date</li>
-                            <li class="list-group-item">Icon</li>
-                            <li class="list-group-item">Temp</li>
-                            <li class="list-group-item">Humidity</li>
-                            <li class="list-group-item">UV Index</li>
-                        </ul>
-                    </div>
-                    <!-- card 5 -->
-                    <div class="card col" style="width: 18rem">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Date</li>
-                            <li class="list-group-item">Icon</li>
-                            <li class="list-group-item">Temp</li>
-                            <li class="list-group-item">Humidity</li>
-                            <li class="list-group-item">UV Index</li>
-                        </ul>
-                    </div>
-                </div>
+                <h3 class="text-uppercase"></h3>
+                <form id="user-form">
+                    <label for="city" class="form-label">Search by City:</label>
+                    <input type="search" name="search-input" id="search-input" autofocus="true" class="form-input" />
+                    <button type="submit" class="btn btn-info" id="search-button"><i class="fas fa-search"> Search
+                        </i></button>
+                </form>
+
+                <!-- container for saved searches -->
+                <div id="saved-searches" class="my-2">
+                    <h3 class="text-uppercase"><i class="far fa-save"> Previous Searches </i></h3>
+                    <!-- saved city searches content will populate here -->
                 </div>
             </div>
-        </div>
+
+            <div class="col-8">
+                <div id="current-weather" class="pt-4 pl-3 m-0">
+                    <!-- current weather content will populate here -->
+                </div>
+            </div>
         </div>
     </main>
 
@@ -118,6 +55,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="https://kit.fontawesome.com/1223513c02.js" crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>
 </body>
