@@ -41,7 +41,7 @@ var getWeather = function (city, lat, lon) {
             // set weather icon as variable
             var weatherIcon = data.current.weather[0].icon;
             // retrieve current date using Moment.js
-            var date = moment().format("MM/DD/YY");
+            var date = moment().format("MM/DD/YY LT");
 
             // create containers and append data
             $("<div>")
@@ -67,22 +67,22 @@ var getWeather = function (city, lat, lon) {
 
             // create and append wind speed
             $("<p>")
-                .text(`Wind Speed: ${data.current.wind_speed}`)
+                .text(`Wind Speed: ${data.current.wind_speed} mph`)
                 .appendTo("#current-weather-data");
 
             // create and append humidity
             $("<p>")
-                .text(`Humidity: ${data.current.humidity}`)
+                .text(`Humidity:  ${data.current.humidity} %`)
                 .appendTo("#current-weather-data");
 
             // create and append UV index
             $("<p>")
-                .text(`UV Index: ${data.current.uvi}`)
+                .text(`UV Index:  ${data.current.uvi}`)
                 .appendTo("#current-weather-data");
 
             // 5-Day Forecast container
             $("<div>")
-                .addClass("mt-4 days-forecast")
+                .addClass("mt-4 flexbox days-forecast")
                 .attr("id", "#days-forecast")
                 .appendTo("#current-weather-display");
 
@@ -93,7 +93,7 @@ var getWeather = function (city, lat, lon) {
 
             // create and append card container to days-forecast
             $("<div>")
-                .addClass("row card-container justify-content")
+                .addClass("ml-1 row card-container space-between")
                 .appendTo(".days-forecast");
 
             // implement for counting loop for 5-day forecast cards
@@ -101,7 +101,7 @@ var getWeather = function (city, lat, lon) {
                 // create, append various elements to forecast card
                 // card div
                 $("<div>")
-                    .addClass("card pb-2 col-3 text-white bg-info")
+                    .addClass("card pb-2 col-2 text-white bg-info")
                     .attr("id", "forecast-card" + index)
                     .appendTo(".card-container");
 
@@ -114,6 +114,7 @@ var getWeather = function (city, lat, lon) {
                 // header
                 $("<h2>")
                     .text(moment().add(index, 'd').format("MM/DD/YY"))
+                    .attr("src", "https://openweathermap.org/img/w/" + weatherIcon + ".png")
                     .addClass("forecast-card-header")
                     .appendTo("#forecast-card-body" + index);
 
