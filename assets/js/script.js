@@ -62,22 +62,22 @@ var getWeather = function (city, lat, lon) {
             // create and append <p> elements into #current-weather-display
             // create and append temperature
             $("<p>")
-                .text("Temperature:" + data.current.temp + "°F")
+                .text(`Temperature: ${data.current.temp} °F`)
                 .appendTo("#current-weather-data");
 
             // create and append wind speed
             $("<p>")
-                .text("Wind Speed:" + data.current.wind_speed)
+                .text(`Wind Speed: ${data.current.wind_speed}`)
                 .appendTo("#current-weather-data");
 
             // create and append humidity
             $("<p>")
-                .text("Humidity:" + data.current.humidity)
+                .text(`Humidity: ${data.current.humidity}`)
                 .appendTo("#current-weather-data");
 
             // create and append UV index
             $("<p>")
-                .text("UV Index:" + data.current.uvi)
+                .text(`UV Index: ${data.current.uvi}`)
                 .appendTo("#current-weather-data");
 
             // 5-Day Forecast container
@@ -129,14 +129,14 @@ var getWeather = function (city, lat, lon) {
 
                 // temp <p>
                 $("<p>")
-                    .text("Temp: " + data.daily[index].temp.day + "°F")
+                    .text(`Temp: ${data.daily[index].temp.day} °F`)
                     .addClass("forecast-card-text")
                     .appendTo("#forecast-card" + index);
                 // console.log(index);
 
                 // humidity <p>
                 $("<p>")
-                    .text("Humidity: " + data.daily[index].humidity + "%")
+                    .text(`Humidity: ${data.daily[index].humidity} %`)
                     .addClass("forecast-card-text")
                     .appendTo("#forecast-card" + index);
                 // console.log(data.daily[index].humidity);
