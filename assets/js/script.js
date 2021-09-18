@@ -93,7 +93,7 @@ var getWeather = function (city, lat, lon) {
 
             // create and append card container to days-forecast
             $("<div>")
-                .addClass("ml-1 row card-container space-between")
+                .addClass("ml-1 mr-1 row card-container space-between")
                 .appendTo(".days-forecast");
 
             // implement for counting loop for 5-day forecast cards
