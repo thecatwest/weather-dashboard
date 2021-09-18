@@ -1,4 +1,4 @@
-# Readme Generator
+# Weather Dashboard
 
 <!-- Project Table of Contents -->
 <details>
@@ -30,7 +30,7 @@ https://thecatwest.github.io/weather-dashboard/
 
 Project Technologies:
 
-ES6,JavaScript,CSS,Bootstrap
+ES6, JavaScript, CSS, Bootstrap
 
 <!-- Installation -->
 ## Installation
@@ -49,7 +49,7 @@ email: catwestover@outlook.com
 ## License
     Project licensed under undefined
 
-[License](#license) 
+[License](#license)
 
 ![License: undefined](https://img.shields.io/badge/License-undefined-yellow.svg)
 
